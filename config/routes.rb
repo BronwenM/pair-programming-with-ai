@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root "programming_languages#index"
+
+  resources :programming_languages, only: [:index, :show, :create, :edit, :delete]
 end
