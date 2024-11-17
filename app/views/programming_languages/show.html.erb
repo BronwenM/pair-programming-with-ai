@@ -1,0 +1,23 @@
+<section>
+  <a href="/">← Back to Languages</a>
+  <header class="page-header">
+    <h1>
+      <%= @programming_language.title %>
+    </h1>
+  </header>
+  
+  <div>
+    <span>
+      <%= @programming_language.description %>
+    </span>
+  </div>
+  <div>
+    <a class="small" href="<%= @programming_language.documentation_link %>">
+      <%= @programming_language.title %> Documentation →
+    </a>
+  </div>
+  <div class="mt-3">
+    <a href="<%= request.path %>/edit" class="btn btn-primary"><%= fa_icon('edit') %> Edit</a>
+    <!-- <%= link_to fa_icon('trash'), [:programming_languages], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %> -->
+  </div>
+</section>

@@ -1,15 +1,8 @@
-<article class="card" style="width: 18rem;">
+<article class="card language-card" style="width: 300px">
+  <%= link_to programming_language_path(programming_language) do %>
   <div class="card-header">
     <h2 class="card-title"><%= programming_language.title %></h2>
+    <%= fa_icon('arrow-right') %>
   </div>
-  <div class="card-body">
-    <span class="card-text">
-      <%= programming_language.description %>
-    </span>
-  </div>
-  <div class="card-body">
-    <a class="card-link small" href="<%= programming_language.documentation_link %>">
-      <%= programming_language.title %> Documentation →
-    </a>
-  </div>
+  <% end %>
 </article>

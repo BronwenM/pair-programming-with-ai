@@ -7,3 +7,21 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+
+.language-card {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .card-title {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,25 @@
+<section>
+  <a href="javascript:history.back()">← Back</a>
+  <header class="page-header">
+    <h1>Edit <%= @programming_language.title %> Info</h1>
+  </header>
+
+  <%= form_for @programming_language do |form| %>
+    <div class="mb-3">
+      <%= form.label :title, "Language Name", class: 'form-label' %>
+      <%= form.text_field :title, value: @programming_language.title, class: 'form-control' %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :description, "Description", class: 'form-label' %>
+      <%= form.text_field :description, value: @programming_language.description, class: 'form-control'%>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :documentation_link, "Link to Documentation", class: 'form-label' %>
+      <%= form.text_field :documentation_link, value: @programming_language.documentation_link, class: 'form-control'%>
+    </div>
+
+    <%= form.submit 'Save Changes', class: 'btn btn-primary' %>
+  <% end %>
+</section>

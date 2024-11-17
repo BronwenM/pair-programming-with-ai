@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "programming_languages#index"
 
-  resources :programming_languages, only: [:index, :show, :create, :edit, :delete]
+  resources :programming_languages
+
 end
